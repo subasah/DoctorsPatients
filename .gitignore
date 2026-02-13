@@ -8,6 +8,8 @@ pnpm-debug.log*
 ## Env files (never commit secrets)
 .env
 .env.*
+!.env.example
+!.env.*.example
 
 ## Expo / React Native
 .expo/
