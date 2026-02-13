@@ -23,6 +23,8 @@ const upload = multer({
 
 export function registerTranscribeRoutes(router: Router) {
   router.post('/api/transcribe', upload.single('audio'), async (req, res) => {
+    const filePath = req.file?.path;
+    let stream: fs.ReadStream | undefined;
     try {
       if (!req.file) {
         return res.status(400).json({ error: 'Missing audio file field "audio".' });
@@ -36,7 +38,9 @@ export function registerTranscribeRoutes(router: Router) {
       }
 
       const client = getOpenAIClient();
-      const filePath = req.file.path;
+      if (!filePath) {
+        return res.status(400).json({ error: 'Upload failed to produce a file path.' });
+      }
       const ext = path.extname(req.file.originalname || '').toLowerCase();
       const mimeGuess =
         ext === '.m4a'
@@ -48,7 +52,7 @@ export function registerTranscribeRoutes(router: Router) {
               : 'application/octet-stream';
 
       // OpenAI SDK accepts a ReadStream for file.
-      const stream = fs.createReadStream(filePath);
+      stream = fs.createReadStream(filePath);
 
       const transcription = await client.audio.transcriptions.create({
         file: stream as any,
@@ -72,6 +76,15 @@ export function registerTranscribeRoutes(router: Router) {
         error: 'Transcription failed.',
         detail: err?.message ?? String(err)
       });
+    } finally {
+      try {
+        stream?.destroy();
+      } catch {
+        // ignore
+      }
+      if (filePath) {
+        await fs.promises.unlink(filePath).catch(() => {});
+      }
     }
   });
 }
