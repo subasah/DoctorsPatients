@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heidi Health - AI Medical Assistant for Clinicians</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#6366F1"/>
+                        <path d="M16 8V24M10 16H22" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text">Heidi Health</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-secondary">Sign In</button>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <div class="mobile-menu-actions">
+            <button class="btn-secondary">Sign In</button>
+            <button class="btn-primary">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">Trusted by 10,000+ clinicians worldwide</div>
+                    <h1>Your AI medical assistant that saves you hours every day</h1>
+                    <p class="hero-description">Heidi automates clinical documentation, transcribes consultations, and generates comprehensive medical notes in seconds. Focus on your patients, not paperwork.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary-large">Start Free Trial</button>
+                        <button class="btn-secondary-large">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.66675 5.83333L13.3334 10L6.66675 14.1667V5.83333Z" fill="currentColor"/>
+                            </svg>
+                            Watch Demo
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">3 hours</span>
+                            <span class="stat-label">saved per day</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.5%</span>
+                            <span class="stat-label">accuracy</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">specialties</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="dashboard-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-title">Patient Consultation</div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="transcription-panel">
+                                <div class="panel-title">Live Transcription</div>
+                                <div class="transcription-line">
+                                    <span class="speaker">Patient:</span>
+                                    <span class="text">"I've been experiencing persistent headaches for the past two weeks..."</span>
+                                </div>
+                                <div class="transcription-line">
+                                    <span class="speaker">Doctor:</span>
+                                    <span class="text">"Can you describe the type of pain and where it's located?"</span>
+                                </div>
+                                <div class="transcription-line">
+                                    <span class="speaker">Patient:</span>
+                                    <span class="text">"It's a throbbing pain on the right side of my head..."</span>
+                                </div>
+                            </div>
+                            <div class="notes-panel">
+                                <div class="panel-title">AI-Generated Notes</div>
+                                <div class="note-section">
+                                    <div class="note-header">Chief Complaint</div>
+                                    <div class="note-text">Persistent headaches for 2 weeks</div>
+                                </div>
+                                <div class="note-section">
+                                    <div class="note-header">History of Present Illness</div>
+                                    <div class="note-text">Patient reports right-sided throbbing headaches...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything you need to streamline clinical documentation</h2>
+                <p>Powerful AI features designed specifically for healthcare professionals</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Transcription</h3>
+                    <p>Accurately transcribe patient consultations in real-time with support for medical terminology and multiple accents.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Automatic Clinical Notes</h3>
+                    <p>Generate SOAP notes, discharge summaries, and referral letters automatically from your consultations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Medical Coding</h3>
+                    <p>Automatically suggest ICD-10 and CPT codes based on your consultation for accurate billing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Specialty Support</h3>
+                    <p>Optimized for 50+ medical specialties including general practice, cardiology, pediatrics, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>HIPAA Compliant</h3>
+                    <p>Bank-level encryption and full HIPAA compliance to keep patient data secure and private.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>EHR Integration</h3>
+                    <p>Seamlessly integrate with major EHR systems including Epic, Cerner, and Meditech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Heidi Works</h2>
+                <p>Get started in minutes and save hours every day</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Record Your Consultation</h3>
+                        <p>Start recording with one click during your patient consultation. Heidi works on desktop, mobile, or tablet.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Transcribes & Analyzes</h3>
+                        <p>Our advanced AI transcribes the conversation in real-time and extracts key medical information.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Review & Export Notes</h3>
+                        <p>Review AI-generated clinical notes, make edits if needed, and export directly to your EHR system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by clinicians worldwide</h2>
+                <p>See what healthcare professionals are saying about Heidi</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Heidi has completely transformed my practice. I'm saving 2-3 hours every day on documentation, which means more time with patients and better work-life balance."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DR</div>
+                        <div class="author-info">
+                            <div class="author-name">Dr. Rebecca Chen</div>
+                            <div class="author-title">Family Medicine, Seattle</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The accuracy is incredible. Heidi understands medical terminology perfectly and generates notes that are actually usable with minimal editing. It's like having a medical scribe for every consultation."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <div class="author-name">Dr. James Morrison</div>
+                            <div class="author-title">Cardiology, Boston</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"As a pediatrician, I need to focus entirely on my young patients. Heidi lets me do that while ensuring my notes are comprehensive and accurate. The parents love that I'm more present too."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SP</div>
+                        <div class="author-info">
+                            <div class="author-name">Dr. Sarah Patel</div>
+                            <div class="author-title">Pediatrics, Austin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose your plan</h2>
+                <p>Start free, upgrade as you grow</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-price">
+                        <span class="price">$0</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 10 consultations per month</li>
+                        <li>✓ Real-time transcription</li>
+                        <li>✓ Basic SOAP notes</li>
+                        <li>✓ Community support</li>
+                        <li>✗ Medical coding</li>
+                        <li>✗ EHR integration</li>
+                    </ul>
+                    <button class="btn-outline">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-name">Professional</div>
+                    <div class="plan-price">
+                        <span class="price">$99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Unlimited consultations</li>
+                        <li>✓ Real-time transcription</li>
+                        <li>✓ Advanced clinical notes</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Medical coding (ICD-10, CPT)</li>
+                        <li>✓ EHR integration</li>
+                    </ul>
+                    <button class="btn-primary">Start Free Trial</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="plan-name">Enterprise</div>
+                    <div class="plan-price">
+                        <span class="price">Custom</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Everything in Professional</li>
+                        <li>✓ Custom integrations</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ Custom training</li>
+                        <li>✓ SLA guarantee</li>
+                        <li>✓ Advanced analytics</li>
+                    </ul>
+                    <button class="btn-outline">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about Heidi Health</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Heidi Health HIPAA compliant?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, Heidi Health is fully HIPAA compliant. We use bank-level encryption for all data transmission and storage, and our infrastructure meets all HIPAA security requirements.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What medical specialties does Heidi support?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Heidi supports over 50 medical specialties including family medicine, internal medicine, pediatrics, cardiology, dermatology, psychiatry, and many more. Our AI is trained on specialty-specific terminology and documentation standards.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I integrate Heidi with my existing EHR system?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, Heidi integrates with major EHR systems including Epic, Cerner, Meditech, and more. Professional and Enterprise plans include EHR integration support.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the transcription?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Heidi achieves 99.5% accuracy for medical transcription. Our AI is specifically trained on medical terminology and can handle various accents and speaking styles.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there a free trial?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We offer a 14-day free trial of our Professional plan with no credit card required. You can also use our free Starter plan indefinitely with up to 10 consultations per month.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What devices does Heidi work on?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Heidi works on desktop (Windows, Mac, Linux), tablets (iPad, Android), and mobile devices (iOS, Android). You can access Heidi through our web app or native mobile applications.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to save hours on documentation?</h2>
+                <p>Join 10,000+ clinicians who are already using Heidi to focus more on patients and less on paperwork.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary-large">Start Free Trial</button>
+                    <button class="btn-secondary-large">Schedule Demo</button>
+                </div>
+                <p class="cta-note">No credit card required • 14-day free trial • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="#6366F1"/>
+                            <path d="M16 8V24M10 16H22" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="logo-text">Heidi Health</span>
+                    </div>
+                    <p class="footer-description">AI-powered clinical documentation for modern healthcare professionals.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#integrations">Integrations</a>
+                    <a href="#updates">Updates</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#documentation">Documentation</a>
+                    <a href="#guides">Guides</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#support">Support</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#security">Security</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#hipaa">HIPAA Compliance</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Heidi Health. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
