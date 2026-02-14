@@ -2,6 +2,21 @@
 
 A full-featured React Native mobile application for transcribing doctor-patient interactions based on medical templates.
 
+## 🚀 Quick Start
+
+```bash
+# Run the app (dependencies already installed)
+npm start
+
+# Or run directly on iOS/Android
+npm run ios      # iOS (Mac only)
+npm run android  # Android
+```
+
+Then scan the QR code with Expo Go app on your phone, or run on an emulator.
+
+**📖 For detailed setup instructions, see [GETTING_STARTED.md](GETTING_STARTED.md)**
+
 ## Features
 
 ### 📝 Session Management
